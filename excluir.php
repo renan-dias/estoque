@@ -1,17 +1,12 @@
 <?php
-// Conexão com o banco de dados
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "estoque";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verifica a conexão
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-}
+include 'conexao.php';
 
 
+//parei aqui, tem que mexer no pdo! Foi quase, faltou 1 segundo só :( 
+$id = $_GET['id'];
+$stmt = $pdo->prepare("SELECT * FROM produtos WHERE id = ?");
+$stmt->execute([$id]);
 
-?> 
+header("Location: index.php");
+exit;
+?>

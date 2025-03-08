@@ -12,6 +12,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Estoque</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body class="container mt-4">
     <h2 class="text-center">Controle de estoque</h2>

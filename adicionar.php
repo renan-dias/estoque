@@ -6,8 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $descricao = $_POST["descricao"];
     $quantidade = $_POST["quantidade"];
     $preco = $_POST["preco"];
-    
-    $stmt = $pdo->prepare("INSERT INTO produtos (pet, nome, descricao, quantidade, preco) VALUES (?, ?, ?, ?)");
+
+    // Erro: Faltava um parâmetro na query e na execução. O correto é inserir 5 valores, não 4.
+    $stmt = $pdo->prepare("INSERT INTO produtos (nome, descricao, quantidade, preco) VALUES (?, ?, ?, ?)");
     $stmt->execute([$nome, $descricao, $quantidade, $preco]);
 
     header("Location: index.php");
@@ -47,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             <input type="text" name="preco" class="form-control" required>
         </div>
         
-        <button type="submit" class="btn btn-sucess">Salvar</button>
-        <a href="index.php" class="btn btn-secundary">Salvar</a>
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="index.php" class="btn btn-secondary">Cancelar</a>
         
     </form>
     <script src="js/bootstrap.min.js"></script>

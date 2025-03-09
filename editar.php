@@ -19,8 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     exit;
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,10 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             <input type="text" name="preco" class="form-control" required>
         </div>
         
-        <button type="submit" class="btn btn-sucess">Salvar</button>
-        <a href="index.php" class="btn btn-secundary">Salvar</a>
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="index.php" class="btn btn-secondary">Cancelar</a>
         
     </form>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+

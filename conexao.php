@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
-$dbname = "estoque";
-$username = "root";
-$password = "";
+$host = "localhost"; //aponta para o endereço web do banco de dados
+$dbname = "estoque"; //nome do banco de dados
+$username = "root"; //usuário
+$password = ""; //senha do banco de dados
 
 try{
     // Correção aqui: mysqli -> mysql

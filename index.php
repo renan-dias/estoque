@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+include 'conexao.php'; //include == chamar arquivo, ou importação
 
 $stmt = $pdo->query("SELECT * FROM produtos");
 $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);

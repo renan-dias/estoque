@@ -1,5 +1,6 @@
 <?php
 include 'conexao.php';
+//$produtosModel = new Product($pdo);
 
 $id = $_GET['id'];
 $stmt = $pdo->prepare("SELECT * FROM produtos WHERE id = ?");
@@ -11,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $descricao = $_POST["descricao"];
     $quantidade = $_POST["quantidade"];
     $preco = $_POST["preco"];
+    $id = $_POST["id"];
 
     $stmt = $pdo->prepare("UPDATE produtos SET nome=?, descricao=?, quantidade=?, preco=? WHERE id=?");
     $stmt->execute([$nome, $descricao, $quantidade, $preco, $id]);

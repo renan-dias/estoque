@@ -16,7 +16,8 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body class="container mt-4"> 
     <!-- Adicionado um botão para adicionar produtos e centralizado o título -->
-    <h2 class="text-center">Controle de estoque</h2>
+    <h2 class="text-center">Nayara
+    </h2>
     <a href="adicionar.php" class="btn btn-success mb-3">Adicionar produto</a>
     <table class="table table-bordered">
         <!-- Cabeçalho da tabela -->
